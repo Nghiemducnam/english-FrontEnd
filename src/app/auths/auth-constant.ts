@@ -1,0 +1,11 @@
+export const TOKEN_KEY = 'Auth_Token';
+export const USERNAME_KEY = 'User_name';
+export const AUTHORITIES_KEY = 'Auth_Role';
+export const ID_KEY = 'AuthUserId';
+export const NAME_KEY = 'Name';
+export const EMAIL_KEY = 'Email';
+export const AVATAR_KEY = 'Avatar';
+export const USER_KEY = 'auth-user';
+export const PHONE_KEY = 'Phone';
+export const ADDRESS_KEY = 'Address';
+export const PASSWORD_KEY = 'Password';

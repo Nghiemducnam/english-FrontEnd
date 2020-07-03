@@ -9,7 +9,7 @@ import {AuthModule} from './auths/models/auth.module';
 import {ToastrModuleConfig} from './toastr/toastr.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {LayoutModule} from './layout/layout.module';
-import {httpInterceptorProviders} from './interceptors/AuthInterceptor';
+import {httpInterceptorProviders} from './auths/interceptors/AuthInterceptor';
 
 @NgModule({
   declarations: [

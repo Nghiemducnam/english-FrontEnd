@@ -6,10 +6,11 @@ import { IrrVerbListComponent } from './irr-verb-list/irr-verb-list.component';
 
 
 @NgModule({
-  declarations: [IrrVerbListComponent],
   imports: [
     CommonModule,
     IrregularVerbRoutingModule
-  ]
+  ],
+  declarations: [IrrVerbListComponent],
+
 })
 export class IrregularVerbModule { }

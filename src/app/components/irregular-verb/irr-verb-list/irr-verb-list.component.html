@@ -1,1 +1,22 @@
-<p>irr-verb-list works!</p>
+<table class="table" border="1px solid">
+  <thead>
+  <tr>
+    <th scope="col">STT</th>
+    <th scope="col">Verb</th>
+    <th scope="col">Verb I</th>
+    <th scope="col">Verb II</th>
+    <th scope="col">Meaningful</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let verb of verbs; let i = index">
+
+    <td>{{i+1}}</td>
+    <td>{{verb.verb}} {{verb.spellingVerb}}</td>
+    <td>{{verb.verb1}} {{verb.spellingVerb1}}</td>
+    <td>{{verb.verb2}} {{verb.spellingVerb2}}</td>
+    <td>{{verb.meaning}}</td>
+  </tr>
+  </tbody>
+</table>
+

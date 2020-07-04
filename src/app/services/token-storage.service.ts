@@ -9,7 +9,7 @@ import {
   PHONE_KEY,
   TOKEN_KEY, USER_KEY,
   USERNAME_KEY
-} from '../auths/auth-constant';
+} from '../auths/models/auth-constant';
 
 @Injectable({
   providedIn: 'root'

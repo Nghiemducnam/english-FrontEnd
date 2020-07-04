@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {HttpClientModule} from '@angular/common/http';
 import {RouterModule} from '@angular/router';
-import {AuthModule} from './auths/models/auth.module';
 import {ToastrModuleConfig} from './toastr/toastr.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {LayoutModule} from './layout/layout.module';
@@ -20,7 +19,7 @@ import {httpInterceptorProviders} from './auths/interceptors/AuthInterceptor';
     AppRoutingModule,
     HttpClientModule,
     RouterModule,
-    AuthModule,
+    // AuthModule,
     ToastrModuleConfig,
     BrowserAnimationsModule,
     LayoutModule,

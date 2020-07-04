@@ -4,22 +4,22 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [{
   path: 'login',
-  loadChildren: () => import('./auths/auth-routing.module').then(m =>m.AuthRoutingModule)
+  loadChildren: () => import('./auths/auth.module').then(m =>m.AuthModule)
 
 },
   {
     path: 'home',
-    loadChildren: () => import('./home/home-routing.module').then(m =>m.HomeRoutingModule)
+    loadChildren: () => import('./home/home.module').then(m =>m.HomeModule)
 
   },
   {
     path: 'layout',
-    loadChildren: () => import('./layout/layout-routing.module').then(m =>m.LayoutRoutingModule)
+    loadChildren: () => import('./layout/layout.module').then(m =>m.LayoutModule)
 
   },
   {
     path: 'verb',
-    loadChildren: () => import('./components/irregular-verb/irregular-verb-routing.module').then(m =>m.IrregularVerbRoutingModule)
+    loadChildren: () => import('./components/irregular-verb/irregular-verb.module').then(m =>m.IrregularVerbModule)
 
   }];
 

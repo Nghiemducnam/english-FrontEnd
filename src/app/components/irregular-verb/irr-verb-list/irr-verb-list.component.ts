@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {IrregularVerb} from '../../../models/IrregularVerb';
+import {IrregularVerbSearch} from '../../../models/IrregularVerbSearch';
 import {VerbsService} from '../../../services/verbs.service';
+import {IrregularVerb} from '../../../models/IrregularVerb';
 
 @Component({
   selector: 'app-irr-verb-list',
@@ -8,7 +9,8 @@ import {VerbsService} from '../../../services/verbs.service';
   styleUrls: ['./irr-verb-list.component.css']
 })
 export class IrrVerbListComponent implements OnInit {
-  irregularVerb: IrregularVerb = {
+  verbs: IrregularVerb [];
+  irregularVerb: IrregularVerbSearch = {
     page: 0,
     pageSize: 5,
     orders: [{"property": "verb",
@@ -18,7 +20,9 @@ export class IrrVerbListComponent implements OnInit {
 
   ngOnInit(): void {
     this.verb.getIrregularList(this.irregularVerb).subscribe(res => {
-      console.log(res)
+      // console.log(res)
+      this.verbs = res.data
+      console.log(this.verbs)
     })
   }
 

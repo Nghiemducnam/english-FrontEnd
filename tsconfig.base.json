@@ -16,11 +16,5 @@
       "es2018",
       "dom"
     ]
-  },
-
-// ----------fix Experimental support for decorators is a feature that is subject to change in a future release
-  "angularCompilerOptions": {
-    "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true
   }
 }

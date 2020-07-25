@@ -10,7 +10,9 @@ import {
   TOKEN_KEY, USER_KEY,
   USERNAME_KEY
 } from '../auths/models/auth-constant';
+import {SessionStorageService} from "ngx-webstorage";
 
+// npm i --save ngx-webstorage
 @Injectable({
   providedIn: 'root'
 })
@@ -18,19 +20,22 @@ export class TokenStorageService {
 
   private roles: Array<string> = [];
 
-  constructor() { }
+  constructor(protected sessionStorageService: SessionStorageService) { }
 
   signOut() {
-    window.sessionStorage.clear();
+    // window.sessionStorage.clear();
+    this.sessionStorageService.clear();
   }
 
   public saveToken(token: string) {
-    window.sessionStorage.removeItem(TOKEN_KEY);
-    window.sessionStorage.setItem(TOKEN_KEY, token);
+    // window.sessionStorage.removeItem(TOKEN_KEY);
+    // window.sessionStorage.setItem(TOKEN_KEY, token);
+    this.sessionStorageService.store(TOKEN_KEY, token);
   }
 
   public getToken(): string {
-    return sessionStorage.getItem(TOKEN_KEY);
+    return this.sessionStorageService.retrieve(TOKEN_KEY)
+    // return sessionStorage.getItem(TOKEN_KEY);
   }
 
   public saveAvatar(avatar: string) {

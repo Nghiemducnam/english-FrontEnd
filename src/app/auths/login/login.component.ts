@@ -27,8 +27,7 @@ export class LoginComponent implements OnInit, OnDestroy {
               // private message: MessageService,
   ) {
     this.loginForm = this.formBuilder.group({
-      userName: ['', [
-        Validators.required]],
+      userName: ['', [Validators.required]],
       password: ['', [Validators.required, Validators.minLength(6)]],
     });
   }
@@ -67,5 +66,9 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.reloadPage();
+  }
+
+  get lf (){
+    return this.loginForm.controls
   }
 }

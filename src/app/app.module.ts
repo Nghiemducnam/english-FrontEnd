@@ -9,6 +9,7 @@ import {ToastrModuleConfig} from './toastr/toastr.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {LayoutModule} from './layout/layout.module';
 import {httpInterceptorProviders} from './auths/interceptors/AuthInterceptor';
+import {NgxWebstorageModule} from "ngx-webstorage";
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import {httpInterceptorProviders} from './auths/interceptors/AuthInterceptor';
     ToastrModuleConfig,
     BrowserAnimationsModule,
     LayoutModule,
+    NgxWebstorageModule.forRoot()
   ],
   providers: [httpInterceptorProviders],
   bootstrap: [AppComponent]

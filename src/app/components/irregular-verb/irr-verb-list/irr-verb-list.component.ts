@@ -18,8 +18,8 @@ export class IrrVerbListComponent implements OnInit {
 
   ngOnInit(): void {
     this.verb.getIrregularList(this.irregularVerb).subscribe(res => {
-      console.log(res)
-    })
+      console.log(res);
+    });
   }
 
 }
